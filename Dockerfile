@@ -59,9 +59,9 @@ ENV ODOO_RC /etc/odoo/odoo.conf
 #        && chown -R odoo /data
 RUN mkdir /extra-addons && mkdir /data && ln -s /usr/lib/python2.7/dist-packages/odoo/addons /
         
-VOLUME ["/extra-addons","/data","/addons","/var/lib/odoo","/etc/odoo","/var/lib/postgresql"]
+#VOLUME ["/extra-addons","/data","/addons","/var/lib/odoo","/etc/odoo","/var/lib/postgresql"]
 
-EXPOSE 8069
+EXPOSE 8069 8072
 
 # Copy startup script
 COPY ./startup.sh /
